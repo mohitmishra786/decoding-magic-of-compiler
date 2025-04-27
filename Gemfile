@@ -1,12 +1,18 @@
 source "https://rubygems.org"
 
-# Use the GitHub Pages gem
-gem "github-pages", group: :jekyll_plugins
+# Use specific Jekyll version for GitHub Pages
+gem "jekyll", "~> 3.9.3"
+
+# This is the default theme for new Jekyll sites
+gem "minima", "~> 2.5"
+
+# GitHub Pages requirements
+gem "github-pages", "~> 231"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-seo-tag", "~> 2.7"
+  gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-seo-tag", "~> 2.8"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -23,5 +29,8 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-# Add webrick for Ruby 3+
-gem "webrick", "~> 1.7" 
+# Required for Ruby 3+
+gem "webrick", "~> 1.7"
+
+# Required for GitHub Pages
+gem "kramdown-parser-gfm" 

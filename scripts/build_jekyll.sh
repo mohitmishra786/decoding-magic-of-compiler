@@ -8,16 +8,30 @@ bash scripts/prepare_jekyll.sh
 echo "Step 2: Fixing permalinks..."
 ruby scripts/fix-jekyll-permalinks.rb
 
-# Create a .nojekyll file to avoid GitHub Pages processing
-echo "Step 3: Creating .nojekyll file..."
-touch .nojekyll
+# Ensure the assets/css directory exists
+echo "Step 3: Setting up CSS..."
+mkdir -p assets/css
 
-# Create a _config.yml file for GitHub Pages if it doesn't exist or update it
-echo "Step 4: Ensuring GitHub Pages config is correct..."
-if [ ! -f "_config.yml" ]; then
-  cp _config.yml.example _config.yml
+# For GitHub Pages, we need to make sure CSS is properly processed
+if [ -f "assets/css/main.scss" ]; then
+  # If SCSS exists, make sure it has front matter
+  if ! grep -q "^---" "assets/css/main.scss"; then
+    echo "---" > assets/css/main.scss.new
+    echo "---" >> assets/css/main.scss.new
+    cat assets/css/main.scss >> assets/css/main.scss.new
+    mv assets/css/main.scss.new assets/css/main.scss
+  fi
+elif [ -f "assets/css/main.css" ]; then
+  # If only CSS exists, create basic SCSS with front matter for GitHub Pages
+  echo "---" > assets/css/main.scss
+  echo "---" >> assets/css/main.scss
+  echo "@import 'minima';" >> assets/css/main.scss 
+  echo "" >> assets/css/main.scss
+  cat assets/css/main.css >> assets/css/main.scss
+  # We can remove the CSS file as we've migrated to SCSS
+  rm assets/css/main.css
 fi
 
 echo "Jekyll site preparation complete!"
-echo "Note: For local testing, run 'bundle exec jekyll serve' if you have Jekyll installed."
-echo "For GitHub Pages, just push your changes to the repository." 
+echo "For GitHub Pages, push your changes to the repository."
+echo "For local testing, run 'bundle exec jekyll serve' if you have Jekyll installed." 

@@ -61,7 +61,8 @@ _chapters/
 # Bundler files
 .bundle/
 vendor/
-Gemfile.lock
+# We need to commit the Gemfile.lock for GitHub Pages
+# Gemfile.lock
 
 # OS specific files
 .DS_Store

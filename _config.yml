@@ -9,6 +9,14 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+# GitHub Pages specific settings
+github: [metadata]
+future: false
+jailed: false
+gfm_quirks: paragraph_end
 
 # Collection settings
 collections:
@@ -26,6 +34,11 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "assets/css"
+    values:
+      sass:
+        style: compressed
 
 # Exclude from processing
 exclude:
@@ -35,4 +48,6 @@ exclude:
   - vendor
   - .git/
   - .github/
-  - .gitignore 
+  - .gitignore
+  - scripts/
+  - src/ 
