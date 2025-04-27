@@ -8,8 +8,10 @@ bash scripts/prepare_jekyll.sh
 echo "Step 2: Fixing permalinks..."
 ruby scripts/fix-jekyll-permalinks.rb
 
-# Build the Jekyll site
-echo "Step 3: Building Jekyll site..."
-JEKYLL_ENV=production bundle exec jekyll build
+# Create a .nojekyll file to avoid GitHub Pages processing
+echo "Step 3: Creating .nojekyll file..."
+touch .nojekyll
 
-echo "Jekyll site built successfully! Files are in the _site directory." 
+echo "Jekyll site preparation complete!"
+echo "Note: For local testing, run 'bundle exec jekyll serve' if you have Jekyll installed."
+echo "For GitHub Pages, just push your changes to the repository." 
