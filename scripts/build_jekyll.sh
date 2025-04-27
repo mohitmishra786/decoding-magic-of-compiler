@@ -8,8 +8,16 @@ bash scripts/prepare_jekyll.sh
 echo "Step 2: Fixing permalinks..."
 ruby scripts/fix-jekyll-permalinks.rb
 
+# Remove .nojekyll file if it exists (we want GitHub Pages to process the site as Jekyll)
+if [ -f ".nojekyll" ]; then
+  echo "Step 3: Removing .nojekyll file..."
+  rm .nojekyll
+else
+  echo "Step 3: No .nojekyll file found, skipping..."
+fi
+
 # Ensure the assets/css directory exists
-echo "Step 3: Setting up CSS..."
+echo "Step 4: Setting up CSS..."
 mkdir -p assets/css
 
 # For GitHub Pages, we need to make sure CSS is properly processed
@@ -34,4 +42,4 @@ fi
 
 echo "Jekyll site preparation complete!"
 echo "For GitHub Pages, push your changes to the repository."
-echo "For local testing, run 'bundle exec jekyll serve' if you have Jekyll installed." 
+echo "For local testing, run 'bundle exec jekyll serve --config _config.yml,_config_dev.yml' if you have Jekyll installed." 
