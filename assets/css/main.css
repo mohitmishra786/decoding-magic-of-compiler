@@ -169,6 +169,10 @@ table tr:nth-child(even) {
   border-bottom: none;
 }
 
+.home-content {
+  padding: 20px 0;
+}
+
 /* Chapter specific */
 .chapter .chapter-header {
   margin-bottom: 30px;
