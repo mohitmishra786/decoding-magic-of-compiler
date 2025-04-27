@@ -51,16 +51,17 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# Jekyll
+# Jekyll site files
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 _chapters/
 
-# Ruby
+# Bundler files
 .bundle/
 vendor/
+Gemfile.lock
 
 # OS specific files
 .DS_Store
@@ -74,3 +75,6 @@ desktop.ini
 *~
 .vscode/
 .idea/
+
+# Logs
+*.log
