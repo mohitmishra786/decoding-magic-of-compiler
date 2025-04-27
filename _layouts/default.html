@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
   {% seo title=false %}
 </head>
 <body>
   <header class="site-header">
     <div class="wrapper">
-      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
       <nav class="site-nav">
-        <a href="{{ "/" | relative_url }}">Home</a>
-        <a href="{{ "/chapters/introduction-to-compilation/" | relative_url }}">Start Reading</a>
-        <a href="{{ "/chapters/appendix-compiler-optimization-reference/" | relative_url }}">Reference</a>
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/chapters/introduction-to-compilation/">Start Reading</a>
+        <a href="{{ site.baseurl }}/chapters/appendix-compiler-optimization-reference/">Reference</a>
         <a href="https://github.com/mohitmishra786/decoding-magic-of-compiler">GitHub</a>
       </nav>
     </div>

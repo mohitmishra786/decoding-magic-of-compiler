@@ -1,3 +1,235 @@
 ---
 ---
- 
+@import "minima";
+
+/* Base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 0.3em;
+  margin-top: 45px;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p, blockquote, ul, ol, dl, figure, table {
+  margin-bottom: 15px;
+}
+
+ul, ol {
+  margin-left: 30px;
+}
+
+li > ul, li > ol {
+  margin-bottom: 0;
+}
+
+blockquote {
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  margin-left: 0;
+  font-style: italic;
+  color: #666666;
+}
+
+/* Code formatting */
+code, pre {
+  font-family: "SF Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 15px;
+  overflow-x: auto;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+pre > code {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+table th, table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Header and footer */
+.site-header {
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 56px;
+  background-color: #f8f9fa;
+}
+
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+.site-nav a {
+  margin-left: 20px;
+  color: #333;
+}
+
+.site-nav a:hover {
+  color: #2a7ae2;
+}
+
+.site-footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 30px 0;
+  background-color: #f8f9fa;
+  font-size: 0.9em;
+  color: #666666;
+}
+
+/* Home page specific */
+.home .book-banner {
+  background-color: #d4e5ff;
+  padding: 30px;
+  border-radius: 5px;
+  margin: 30px 0;
+}
+
+.home .book-banner h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+
+/* Chapter specific */
+.chapter .chapter-header {
+  margin-bottom: 30px;
+}
+
+.chapter .chapter-navigation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.chapter .chapter-navigation .nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chapter .chapter-navigation .nav-links .prev,
+.chapter .chapter-navigation .nav-links .next {
+  padding: 10px 15px;
+  background-color: #f6f8fa;
+  border-radius: 4px;
+}
+
+.chapter .chapter-navigation .nav-links .prev:hover,
+.chapter .chapter-navigation .nav-links .next:hover {
+  background-color: #eaecef;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .site-header .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .site-nav {
+    margin-top: 10px;
+  }
+  
+  .site-nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  
+  .chapter .chapter-navigation .nav-links {
+    flex-direction: column;
+  }
+  
+  .chapter .chapter-navigation .nav-links .next {
+    margin-top: 10px;
+  }
+} 

@@ -32,11 +32,11 @@ layout: default
     
     <div class="nav-links">
       {% if prev_chapter %}
-        <a href="{{ prev_chapter.url | relative_url }}" class="prev">← Previous: {{ prev_chapter.title }}</a>
+        <a href="{{ site.baseurl }}{{ prev_chapter.url }}" class="prev">← Previous: {{ prev_chapter.title }}</a>
       {% endif %}
       
       {% if next_chapter %}
-        <a href="{{ next_chapter.url | relative_url }}" class="next">Next: {{ next_chapter.title }} →</a>
+        <a href="{{ site.baseurl }}{{ next_chapter.url }}" class="next">Next: {{ next_chapter.title }} →</a>
       {% endif %}
     </div>
   </div>
