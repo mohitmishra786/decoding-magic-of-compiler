@@ -13,21 +13,21 @@ This book demystifies the inner workings of modern compilers, focusing on the op
 
 ## Table of Contents
 
-1. [Introduction to Compilation](./chapters/ch-1-introduction-to-compilation/)
-2. [Assembly Language Fundamentals](./chapters/ch-2-assembly-language-fundamentals/)
-3. [Measuring Performance](./chapters/ch-3-measuring-performance/)
-4. [Mathematical Prowess of Compilers](./chapters/ch-4-mathematical-prowess-of-compilers/)
-5. [Unlocking Vectorization](./chapters/ch-5-unlocking-vectorization/)
-6. [Memory Access Patterns](./chapters/ch-6-memory-access-patterns/)
-7. [Parallelization](./chapters/ch-7-parallelization/)
-8. [Limits of Compiler Clairvoyance](./chapters/ch-8-limits-of-compiler-clairvoyance/)
-9. [Virtual Function Conundrum](./chapters/ch-9-virtual-function-conundrum/)
-10. [Aliasing and Optimization](./chapters/ch-10-aliasing-and-optimization/)
-11. [Data Layout and Structure Padding](./chapters/ch-11-data-layout-and-structure-padding/)
-12. [Importance of Algorithm Selection](./chapters/ch-12-importance-of-algorithm-selection/)
-13. [Practical Tips for Compiler Optimization](./chapters/ch-13-practical-tips-for-compiler-optimization/)
-14. [Future Directions in Compiler Optimization](./chapters/ch-14-future-directions-in-compiler-optimization/)
-15. [Appendix: Compiler Optimization Reference](./chapters/appendix-compiler-optimization-reference/)
+1. [Introduction to Compilation]({{ site.baseurl }}/chapters/introduction-to-compilation/)
+2. [Assembly Language Fundamentals]({{ site.baseurl }}/chapters/assembly-language-fundamentals/)
+3. [Measuring Performance]({{ site.baseurl }}/chapters/measuring-performance/)
+4. [Mathematical Prowess of Compilers]({{ site.baseurl }}/chapters/mathematical-prowess-of-compilers/)
+5. [Unlocking Vectorization]({{ site.baseurl }}/chapters/unlocking-vectorization/)
+6. [Memory Access Patterns]({{ site.baseurl }}/chapters/memory-access-patterns/)
+7. [Parallelization]({{ site.baseurl }}/chapters/parallelization/)
+8. [Limits of Compiler Clairvoyance]({{ site.baseurl }}/chapters/limits-of-compiler-clairvoyance/)
+9. [Virtual Function Conundrum]({{ site.baseurl }}/chapters/virtual-function-conundrum/)
+10. [Aliasing and Optimization]({{ site.baseurl }}/chapters/aliasing-and-optimization/)
+11. [Data Layout and Structure Padding]({{ site.baseurl }}/chapters/data-layout-and-structure-padding/)
+12. [Importance of Algorithm Selection]({{ site.baseurl }}/chapters/importance-of-algorithm-selection/)
+13. [Practical Tips for Compiler Optimization]({{ site.baseurl }}/chapters/practical-tips-for-compiler-optimization/)
+14. [Future Directions in Compiler Optimization]({{ site.baseurl }}/chapters/future-directions-in-compiler-optimization/)
+15. [Appendix: Compiler Optimization Reference]({{ site.baseurl }}/chapters/appendix-compiler-optimization-reference/)
 
 ## Key Features
 
@@ -45,7 +45,7 @@ The code examples are presented in C/C++ for clarity and portability, but the pr
 
 ## Contributing
 
-Found an error or want to suggest an improvement? Contributions are welcome! Please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/yourusername/decoding-magic-of-compiler).
+Found an error or want to suggest an improvement? Contributions are welcome! Please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/mohitmishra786/decoding-magic-of-compiler).
 
 ## License
 
@@ -56,6 +56,6 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 <div class="book-banner">
   <div class="banner-content">
     <h2>Start your journey into compiler optimization</h2>
-    <p>Begin with the <a href="./chapters/ch-1-introduction-to-compilation/">Introduction to Compilation</a> or explore the <a href="./chapters/appendix-compiler-optimization-reference/">Compiler Optimization Reference</a>.</p>
+    <p>Begin with the <a href="{{ site.baseurl }}/chapters/introduction-to-compilation/">Introduction to Compilation</a> or explore the <a href="{{ site.baseurl }}/chapters/appendix-compiler-optimization-reference/">Compiler Optimization Reference</a>.</p>
   </div>
 </div>

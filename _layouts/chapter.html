@@ -12,27 +12,31 @@ layout: default
   </div>
 
   <div class="chapter-navigation">
-    {% assign chapters = site.pages | where_exp: "page", "page.path contains 'src/ch-'" | sort: "path" %}
-    {% assign current_index = -1 %}
-    {% for ch in chapters %}
-      {% if ch.path == page.path %}
-        {% assign current_index = forloop.index0 %}
+    {% assign chapters = site.chapters | sort: "chapter_number" %}
+    {% assign current_chapter_number = page.chapter_number | to_integer %}
+    {% assign prev_chapter_number = current_chapter_number | minus: 1 %}
+    {% assign next_chapter_number = current_chapter_number | plus: 1 %}
+    
+    {% assign prev_chapter = nil %}
+    {% assign next_chapter = nil %}
+    
+    {% for chapter in chapters %}
+      {% assign chapter_num = chapter.chapter_number | to_integer %}
+      {% if chapter_num == prev_chapter_number %}
+        {% assign prev_chapter = chapter %}
+      {% endif %}
+      {% if chapter_num == next_chapter_number %}
+        {% assign next_chapter = chapter %}
       {% endif %}
     {% endfor %}
-
+    
     <div class="nav-links">
-      {% if current_index > 0 %}
-        {% assign prev_index = current_index | minus: 1 %}
-        {% assign prev_chapter = chapters[prev_index] %}
+      {% if prev_chapter %}
         <a href="{{ prev_chapter.url | relative_url }}" class="prev">← Previous: {{ prev_chapter.title }}</a>
       {% endif %}
-
-      {% if current_index < chapters.size %}
-        {% assign next_index = current_index | plus: 1 %}
-        {% if chapters[next_index] %}
-          {% assign next_chapter = chapters[next_index] %}
-          <a href="{{ next_chapter.url | relative_url }}" class="next">Next: {{ next_chapter.title }} →</a>
-        {% endif %}
+      
+      {% if next_chapter %}
+        <a href="{{ next_chapter.url | relative_url }}" class="next">Next: {{ next_chapter.title }} →</a>
       {% endif %}
     </div>
   </div>
