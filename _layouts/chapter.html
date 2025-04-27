@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<article class="chapter">
+  <header class="chapter-header">
+    <h1 class="chapter-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="chapter-content">
+    {{ content }}
+  </div>
+
+  <div class="chapter-navigation">
+    {% assign chapters = site.pages | where_exp: "page", "page.path contains 'src/ch-'" | sort: "path" %}
+    {% assign current_index = -1 %}
+    {% for ch in chapters %}
+      {% if ch.path == page.path %}
+        {% assign current_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="nav-links">
+      {% if current_index > 0 %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign prev_chapter = chapters[prev_index] %}
+        <a href="{{ prev_chapter.url | relative_url }}" class="prev">← Previous: {{ prev_chapter.title }}</a>
+      {% endif %}
+
+      {% if current_index < chapters.size %}
+        {% assign next_index = current_index | plus: 1 %}
+        {% if chapters[next_index] %}
+          {% assign next_chapter = chapters[next_index] %}
+          <a href="{{ next_chapter.url | relative_url }}" class="next">Next: {{ next_chapter.title }} →</a>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</article> 

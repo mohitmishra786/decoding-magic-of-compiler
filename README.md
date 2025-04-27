@@ -1,76 +1,61 @@
-## The Art of Compiler-Friendly Code: Writing Efficient and Readable Programs
+---
+layout: home
+title: Decoding the Magic of Compilers
+---
 
-**Chapter 1: Introduction to Compilation:**
-* What is a compiler and what does it do?
-* The compilation process: from source code to executable.
-* Different types of compilers and their applications.
+# Decoding the Magic of Compilers
 
-**Chapter 2: Assembly Language Fundamentals:**
-* Demystifying assembly language: basic syntax and structure.
-* Common x86-64 instructions and operands.
-* Understanding registers and their usage.
+A comprehensive exploration of compiler optimization techniques and how they transform your code for maximum performance.
 
-**Chapter 3: Measuring Performance (and Why Assembly Isn't Enough):**
-* The importance of benchmarking for performance analysis.
-* Why simply counting lines of assembly code can be misleading.
-* Recommended benchmarking tools and techniques.
+## About This Book
 
-**Chapter 4: The Mathematical Prowess of Compilers:**
-* How compilers optimize mathematical operations.
-* Leveraging the power of the `lea` instruction for addition and multiplication.
-* Compiler tricks for division and modulus operations.
+This book demystifies the inner workings of modern compilers, focusing on the optimization techniques that transform human-written code into highly efficient executable programs. Whether you're a software developer seeking to write more compiler-friendly code, a computer science student diving deeper into compiler theory, or a performance enthusiast wanting to understand what happens behind the scenes, this resource will provide valuable insights.
 
-**Chapter 5: Unlocking Vectorization:**
-* Understanding vectorization and its benefits.
-* Utilizing SIMD registers and instructions.
-* Exploring the impact of data types on vectorization.
-* The importance of standard algorithms and their vectorization potential.
-* Addressing the challenges of floating-point vectorization.
+## Table of Contents
 
-**Chapter 6: Mastering Control Flow Optimization:**
-* How compilers analyze and optimize control flow.
-* Loop hoisting and its impact on performance.
-* The interplay between control flow and vectorization.
+1. [Introduction to Compilation](./chapters/ch-1-introduction-to-compilation/)
+2. [Assembly Language Fundamentals](./chapters/ch-2-assembly-language-fundamentals/)
+3. [Measuring Performance](./chapters/ch-3-measuring-performance/)
+4. [Mathematical Prowess of Compilers](./chapters/ch-4-mathematical-prowess-of-compilers/)
+5. [Unlocking Vectorization](./chapters/ch-5-unlocking-vectorization/)
+6. [Memory Access Patterns](./chapters/ch-6-memory-access-patterns/)
+7. [Parallelization](./chapters/ch-7-parallelization/)
+8. [Limits of Compiler Clairvoyance](./chapters/ch-8-limits-of-compiler-clairvoyance/)
+9. [Virtual Function Conundrum](./chapters/ch-9-virtual-function-conundrum/)
+10. [Aliasing and Optimization](./chapters/ch-10-aliasing-and-optimization/)
+11. [Data Layout and Structure Padding](./chapters/ch-11-data-layout-and-structure-padding/)
+12. [Importance of Algorithm Selection](./chapters/ch-12-importance-of-algorithm-selection/)
+13. [Practical Tips for Compiler Optimization](./chapters/ch-13-practical-tips-for-compiler-optimization/)
+14. [Future Directions in Compiler Optimization](./chapters/ch-14-future-directions-in-compiler-optimization/)
+15. [Appendix: Compiler Optimization Reference](./chapters/appendix-compiler-optimization-reference/)
 
-**Chapter 7: Architectural Tricks and Optimizations:**
-* Exploiting specific CPU instructions for performance gains.
-* Examples of architectural tricks: population count and bit manipulation.
-* Addressing CPU errata and performance bugs.
+## Key Features
 
-**Chapter 8: The Limits of Compiler Clairvoyance:**
-* Understanding the boundaries of compiler optimization.
-* The importance of code clarity and intention revealing code.
-* Working with functions: inlining, purity, and link-time optimization.
+- Practical code examples that demonstrate optimization principles
+- In-depth analysis of how compilers transform code
+- Benchmark comparisons showing the impact of different optimization techniques
+- Platform-specific considerations for major compilers (GCC, Clang, MSVC)
+- Guidance on writing code that compilers can optimize effectively
 
-**Chapter 9: The Virtual Function Conundrum:**
-* The performance implications of virtual functions.
-* Speculative devirtualization and its benefits.
-* Potential future improvements in virtual function optimization.
+## How to Use This Book
 
-**Chapter 10:  Aliasing and Its Impact on Optimization:**
-* How aliasing can hinder compiler optimizations.
-* Strategies for mitigating aliasing issues: using the type system and pass-by-value.
-* The `restrict` keyword and its implications.
+This book is designed to be read sequentially from start to finish, as later chapters build upon concepts introduced in earlier ones. However, each chapter also stands on its own as a reference for specific optimization topics.
 
-**Chapter 11: Data Layout and Structure Padding:**
-* Understanding structure layout and padding.
-* Tools for analyzing and optimizing data layout.
-* Addressing alignment and memory access efficiency.
+The code examples are presented in C/C++ for clarity and portability, but the principles apply to most compiled languages.
 
-**Chapter 12: The Importance of Algorithm Selection:**
-* How algorithms impact performance.
-* Choosing the right algorithm for the task.
-* The limitations of compiler optimization for inefficient algorithms.
+## Contributing
 
-**Chapter 13: Practical Tips for Compiler Optimization:**
-* Leveraging compiler flags and optimization levels.
-* Using compiler warnings to identify potential issues.
-* Best practices for writing compiler-friendly code.
+Found an error or want to suggest an improvement? Contributions are welcome! Please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/yourusername/decoding-magic-of-compiler).
 
+## License
 
-**Chapter 14: Conclusion: The Ongoing Evolution of Compilers:**
-* Reflecting on the power and limitations of compilers.
-* The continuous advancements in compiler technology.
-* The importance of staying up-to-date with compiler developments.
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
-**Appendix:** A quick reference guide to common x86-64 instructions and optimization flags.
+---
+
+<div class="book-banner">
+  <div class="banner-content">
+    <h2>Start your journey into compiler optimization</h2>
+    <p>Begin with the <a href="./chapters/ch-1-introduction-to-compilation/">Introduction to Compilation</a> or explore the <a href="./chapters/appendix-compiler-optimization-reference/">Compiler Optimization Reference</a>.</p>
+  </div>
+</div>
